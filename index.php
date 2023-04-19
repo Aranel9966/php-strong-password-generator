@@ -15,10 +15,19 @@ include './partials/functions.php';
 
     <form action="index.php" method="GET">
         <input type="number" min="4" name="length">
-        <button type="submit">invia</button>
+        <button type="submit">Genera</button>
     </form>
     <h2>
-        <?php echo randomPassword($lenght)?>
+
+        <?php
+        //richiamo della funzione randomPassword
+        $_SESSION['randomN'] = randomPassword($lenght);
+        //controllo per randomN
+        if(!empty($_SESSION['randomN'])){
+            //indirizazione post creazione password
+            header('Location: generator.php');
+        }
+        ?> 
     </h2>
     
 </body>

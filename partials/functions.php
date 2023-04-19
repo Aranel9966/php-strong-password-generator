@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 function randomPassword($x) {
     // genero una stringa di lettere e numeri 
@@ -20,3 +21,5 @@ function randomPassword($x) {
 };
 //variabile per recuperare la lunghezza desiderata 
 $lenght=$_GET["length"]??'';
+
+
