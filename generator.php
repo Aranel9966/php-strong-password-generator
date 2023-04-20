@@ -12,6 +12,7 @@
             session_start();
             // richiamo e stampa della funzione 
             echo "<h1>Password : <br>{$_SESSION['randomN']}</h1>";
+            session_destroy();
             ?>
         </h1>
         <a href="./index.php">Home</a>

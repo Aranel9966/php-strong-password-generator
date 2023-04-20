@@ -18,12 +18,12 @@ include './partials/functions.php';
         <button type="submit">Genera</button>
     </form>
     <h2>
-
         <?php
         //richiamo della funzione randomPassword
         $_SESSION['randomN'] = randomPassword($lenght);
         //controllo per randomN
-        if(!empty($_SESSION['randomN'])){
+        if(isset($_GET['length']) && ($_GET['length'])>=4 ){
+            //OR if(!empty($_SESSION['randomN'])){
             //indirizazione post creazione password
             header('Location: generator.php');
         }
